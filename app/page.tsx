@@ -1,101 +1,232 @@
+import HomeNavbar from "@/components/homenavbar";
 import Image from "next/image";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaGoogleScholar } from "react-icons/fa6";
+import { MdWork } from "react-icons/md";
+import { IoIosStats } from "react-icons/io";
+import ProfileCard from "@/components/profilecard";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div>
+      <div className="flex justify-center items-center gap-5 pt-5">
+        <FaFacebook
+          size={24}
+          color="#4267B2"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <FaInstagram
+          size={24}
+          color="#E1306C"
+        />
+        <FaLinkedin
+          size={24}
+          color="#0077B5"
+        />
+      </div>
+      <div className="px-60">
+        <Image
+          src="/sahrdaya-banner.webp"
+          alt="Sahrdaya Banner"
+          width={1000}
+          height={1000}
+          className="w-full"
+        />
+      </div>
+      <HomeNavbar />
+      <div className="px-40 grid grid-cols-3 gap-10">
+        <div className="bg-blue-800 p-5 text-white flex flex-col gap-5 rounded-lg">
+          <div className="flex gap-2 items-center text-2xl font-semibold">
+            <FaGoogleScholar />
+            <p>Programs Offered</p>
+          </div>
+          <div className="w-64">
+            <p>
+              Sahrdaya College of Engineering & Technology offers Six UG(B.Tech)
+              Programmes, three PG(M.Tech) & Doctoral(Ph.D) Programmes in
+              various branches of study.
+            </p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="bg-green-600 p-5 text-white flex flex-col gap-5 rounded-lg">
+          <div className="flex gap-2 items-center text-2xl font-semibold">
+            <MdWork />
+            <p>Placement Statistics</p>
+          </div>
+          <div className="w-64">
+            <p>
+              Training and Placement Department helps students develop their
+              Intrapersonal skills and abilities so as to enhance their
+              personality as well as help them get placed in reputed
+              organizations.
+            </p>
+          </div>
+        </div>
+        <div className="bg-red-600 p-5 text-white flex flex-col gap-5 rounded-lg">
+          <div className="flex gap-2 items-center text-2xl font-semibold">
+            <IoIosStats />
+            <p>Placement Statistics</p>
+          </div>
+          <div className="w-64">
+            <p>
+              Sahrdaya have bagged many achievements beginning from its
+              inception. Ranked top in B.Tech results in the state of Kerala
+              Consistently. Top pass percentage and Topper-1 college under
+              University
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="px-40 py-10">
+        <div className="flex flex-col gap-5">
+          <p className="text-2xl font-medium">About Us</p>
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/sahrdaya.webp"
+            alt="sahrdaya"
+            width={500}
+            height={500}
+            className="rounded-lg overflow-hidden"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <p>
+            Irinjalakuda Diocese was established in the year 1978, and His
+            Excellency Mar James Pazhayattil took over the reins as the first
+            Bishop of this Diocese. Irinjalakuda Diocese is doing a excellent
+            service meeting the needs of Education, Health and Social
+            responsibilities. Considering the demands on the necessity of value
+            based higher technical education
+          </p>
+          <div className="w-full flex gap-5 justify-center">
+            <button className="bg-black text-white px-5 py-2 rounded-full">
+              Read More
+            </button>
+            <button className="border-2 border-gray-600 text-black px-5 py-2 rounded-full hover:bg-gray-100">
+              About Us
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col gap-10 pb-10 px-40">
+        <p className="text-2xl font-medium">Our Highlights</p>
+        <div className="grid grid-cols-2 gap-10 ">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/company.webp"
+            alt="Hiring Companies"
+            width={500}
+            height={500}
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src="/placement.webp"
+            alt="Placements"
+            width={500}
+            height={500}
+            className="h-full object-contain"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </div>
+      <div className="grid grid-cols-3 pb-10 gap-10 px-40">
+        <div className="flex flex-col pb-10 gap-10">
+          <div>
+            <p className="text-2xl font-medium text-left">BTech Programmes</p>
+          </div>
+          <div className="flex flex-col gap-2 text-lg">
+            <p>BioMedical Engineering</p>
+            <p>Biotechnology</p>
+            <p>Civil Engineering</p>
+            <p>Computer Science & Engineering</p>
+            <p>Electrical & Electronics Engineering</p>
+            <p>Electronics & Communication Engineering</p>
+          </div>
+        </div>
+        <div className="flex flex-col pb-10 gap-10">
+          <div>
+            <p className="text-2xl font-medium text-left">MTech Programmes</p>
+          </div>
+          <div className="flex flex-col gap-2 text-lg">
+            <p>Computer Science and Engineering (CSE)</p>
+            <p>Embedded Systems (ES)</p>
+            <p>Industrial Biotechnology (IBT)</p>
+          </div>
+        </div>
+        <div className="flex flex-col pb-10 gap-10">
+          <div>
+            <p className="text-2xl font-medium text-left">Phd Programmes</p>
+          </div>
+          <div className="flex flex-col gap-2 text-lg">
+            <p>Biotechnology</p>
+            <p>Computer Science and Engineering</p>
+            <p>Electronics and Communications</p>
+            <p>Chemistry</p>
+          </div>
+        </div>
+      </div>
+      <div className="px-40 pb-10 flex flex-col gap-10">
+        <div>
+          <p className="text-3xl font-medium">Our Team</p>
+        </div>
+        <div className="grid grid-cols-4 gap-10">
+          <ProfileCard
+            image="/anto.webp"
+            name="Rev. Fr. Dr. Anto Chungath"
+            designation="Executive Director"
+          />
+          <ProfileCard
+            image="/leon.webp"
+            name="Dr Leon Ittiachen"
+            designation="Director"
+          />
+          <ProfileCard
+            image="/sudha.webp"
+            name="Dr Sudha George Valavi"
+            designation="Joint Director"
+          />
+          <ProfileCard
+            image="/nixon.webp"
+            name="Dr Nixon Kuruvila"
+            designation="Principal"
+          />
+          <ProfileCard
+            image="/finto.webp"
+            name="Dr Finto Raphael"
+            designation="Vice Principal"
+          />
+        </div>
+      </div>
+      <div className="flex flex-col gap-10 pb-10 px-40 pt-10">
+        <p className="text-3xl font-medium text-center">Contact US</p>
+        <div className="px-40">
+          <form
+            action=""
+            className="flex flex-col gap-5"
+          >
+            <div className="flex flex-col gap-2">
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                className="border-2 border-gray-300 rounded-md h-10"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="email">Email</label>
+              <input
+                type="text"
+                name="email"
+                className="border-2 border-gray-300 rounded-md h-10"
+              />
+            </div>
+            <div className="flex flex-col gap-2">
+              <label htmlFor="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                className="border-2 border-gray-300 rounded-md h-20"
+              ></textarea>
+            </div>
+            <button className="border-2 border-gray-400 w-fit self-end px-4 py-1 rounded-lg hover:bg-gray-100">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }
