@@ -1,43 +1,29 @@
 import HomeNavbar from "@/components/homenavbar";
 import Image from "next/image";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+// import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaGoogleScholar } from "react-icons/fa6";
 import { MdWork } from "react-icons/md";
 import { IoIosStats } from "react-icons/io";
 import ProfileCard from "@/components/profilecard";
 import ImageSlider from "@/components/imageslider";
-import Navbar from "@/components/navbar";
+import Sidebar from "@/components/sidebar";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <div className="flex justify-center items-center gap-5 pt-5">
-        <FaFacebook
-          size={24}
-          color="#4267B2"
-        />
-        <FaInstagram
-          size={24}
-          color="#E1306C"
-        />
-        <FaLinkedin
-          size={24}
-          color="#0077B5"
-        />
-      </div>
-      <div className="px-60">
+    <div className="py-10">
+      <Sidebar />
+      <div className="md:px-80">
         <Image
           src="/sahrdaya-banner.webp"
           alt="Sahrdaya Banner"
-          width={1000}
-          height={1000}
-          className="w-full"
+          width={2000}
+          height={2000}
+          className="w-full object-cover"
         />
       </div>
       <HomeNavbar />
       <ImageSlider />
-      <div className="px-40 grid grid-cols-3 gap-10">
+      <div className="px-5 md:px-40 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div className="bg-blue-800 p-5 text-white flex flex-col gap-5 rounded-lg">
           <div className="flex gap-2 items-center text-2xl font-semibold">
             <FaGoogleScholar />
@@ -80,7 +66,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="px-40 py-10">
+      <div className="px-5 md:px-40 py-10">
         <div className="flex flex-col gap-5">
           <p className="text-2xl font-medium">About Us</p>
           <Image
@@ -108,7 +94,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-10 pb-10 px-40">
+      <div className="flex flex-col gap-10 pb-10 px-5 md:px-40">
         <p className="text-2xl font-medium">Our Highlights</p>
         <div className="grid grid-cols-2 gap-10 ">
           <Image
@@ -126,7 +112,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="grid grid-cols-3 pb-10 gap-10 px-40">
+      <div className="grid grid-cols-1 md:grid-cols-3 pb-10 gap-10 px-5 md:px-40">
         <div className="flex flex-col pb-10 gap-10">
           <div>
             <p className="text-2xl font-medium text-left">BTech Programmes</p>
@@ -162,11 +148,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="px-40 pb-10 flex flex-col gap-10">
+      <div className="px-5 md:px-40 pb-10 flex flex-col gap-10">
         <div>
           <p className="text-3xl font-medium">Our Team</p>
         </div>
-        <div className="grid grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <ProfileCard
             image="/anto.webp"
             name="Rev. Fr. Dr. Anto Chungath"
@@ -194,9 +180,9 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-10 pb-10 px-40 pt-10">
+      <div className="flex flex-col gap-10 px-5 md:px-40 pt-10">
         <p className="text-3xl font-medium text-center">Contact US</p>
-        <div className="px-40">
+        <div className="md:px-40">
           <form
             action=""
             className="flex flex-col gap-5"

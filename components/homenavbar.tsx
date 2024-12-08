@@ -1,45 +1,31 @@
 export default function HomeNavbar() {
+  const navItems = [
+    { label: "Home", link: "#" },
+    { label: "Vision", link: "#" },
+    { label: "About Us", link: "#" },
+    { label: "Autonomous", link: "#" },
+    { label: "Examination (Autonomous)", link: "#" },
+    { label: "Admission", link: "#" },
+    { label: "Departments", link: "#" },
+    { label: "Centers", link: "#" },
+    { label: "Academics", link: "#" },
+    { label: "Cells", link: "#" },
+    { label: "Training & Placements", link: "#" },
+    { label: "Research", link: "#" },
+    { label: "Campus", link: "#" },
+  ];
+
   return (
-    <div className="flex gap-5 bg-[#182668] px-40 py-5 text-white flex-wrap my-10">
-      <div>
-        <p>Home</p>
-      </div>
-      <div>
-        <p>Vision</p>
-      </div>
-      <div>
-        <p>About Us</p>
-      </div>
-      <div>
-        <p>Autonomous</p>
-      </div>
-      <div>
-        <p>Examination (Autonomous)</p>
-      </div>
-      <div>
-        <p>Admission</p>
-      </div>
-      <div>
-        <p>Departments</p>
-      </div>
-      <div>
-        <p>Centers</p>
-      </div>
-      <div>
-        <p>Academics</p>
-      </div>
-      <div>
-        <p>Cells</p>
-      </div>
-      <div>
-        <p>Training & Placements</p>
-      </div>
-      <div>
-        <p>Research</p>
-      </div>
-      <div>
-        <p>Campus</p>
-      </div>
+    <div className="flex gap-5 bg-[#182668] px-5 md:px-40 py-5 text-white flex-wrap mt-10">
+      {navItems.map((item, index) => (
+        <a
+          key={index}
+          href={item.link}
+          className="text-white hover:text-gray-400 transition duration-300 ease-in-out px-3 rounded-lg"
+        >
+          {item.label}
+        </a>
+      ))}
     </div>
   );
 }

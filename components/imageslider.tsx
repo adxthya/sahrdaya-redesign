@@ -29,7 +29,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-full h-[400px] overflow-hidden mb-10">
+    <div className="relative w-full h-[400px] overflow-hidden md:mb-10">
       {/* Image Container */}
       <div className="relative w-full h-[400px]">
         {images.map((image, index) => (
@@ -53,7 +53,7 @@ const ImageSlider = () => {
       {/* Left Arrow */}
       <button
         onClick={goToPrevious}
-        className="absolute top-1/2 left-40 transform -translate-y-1/2 text-black bg-white p-4 rounded-full opacity-70 hover:opacity-100 focus:outline-none transition-opacity"
+        className="absolute top-1/2 left-2 md:left-40 transform -translate-y-1/2 text-black bg-white p-4 rounded-full opacity-70 hover:opacity-100 focus:outline-none transition-opacity"
       >
         <span className="text-3xl">❮</span>
       </button>
@@ -61,7 +61,7 @@ const ImageSlider = () => {
       {/* Right Arrow */}
       <button
         onClick={goToNext}
-        className="absolute top-1/2 right-40 transform -translate-y-1/2 text-black bg-white p-4 rounded-full opacity-70 hover:opacity-100 focus:outline-none transition-opacity"
+        className="absolute top-1/2 right-2 md:right-40 transform -translate-y-1/2 text-black bg-white p-4 rounded-full opacity-70 hover:opacity-100 focus:outline-none transition-opacity"
       >
         <span className="text-3xl">❯</span>
       </button>
