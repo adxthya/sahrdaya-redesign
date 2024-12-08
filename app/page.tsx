@@ -5,10 +5,13 @@ import { FaGoogleScholar } from "react-icons/fa6";
 import { MdWork } from "react-icons/md";
 import { IoIosStats } from "react-icons/io";
 import ProfileCard from "@/components/profilecard";
+import ImageSlider from "@/components/imageslider";
+import Navbar from "@/components/navbar";
 
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <div className="flex justify-center items-center gap-5 pt-5">
         <FaFacebook
           size={24}
@@ -33,6 +36,7 @@ export default function Home() {
         />
       </div>
       <HomeNavbar />
+      <ImageSlider />
       <div className="px-40 grid grid-cols-3 gap-10">
         <div className="bg-blue-800 p-5 text-white flex flex-col gap-5 rounded-lg">
           <div className="flex gap-2 items-center text-2xl font-semibold">

@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
-    <div className="flex items-center justify-center flex-wrap gap-5 px-60 pt-5">
-      <div className="flex gap-5 flex-wrap mx-auto w-fit">
+    <div className="flex items-center justify-center gap-5 px-60 py-5 text-sm bg-[#182668] text-white">
+      <div className="flex gap-5 mx-auto w-fit flex-wrap justify-center">
         <div>
           <p>Careers</p>
         </div>
