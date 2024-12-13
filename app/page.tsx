@@ -181,37 +181,66 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-col gap-10 px-5 md:px-40 pt-10">
-        <p className="text-3xl font-medium text-center">Contact US</p>
-        <div className="md:px-40">
+        <p className="text-3xl font-semibold text-center text-gray-800">
+          Contact Us
+        </p>
+        <div className="md:px-20">
           <form
             action=""
-            className="flex flex-col gap-5"
+            className="bg-white shadow-md rounded-lg p-8 flex flex-col gap-6"
           >
             <div className="flex flex-col gap-2">
-              <label htmlFor="name">Name</label>
+              <label
+                htmlFor="name"
+                className="text-gray-700 font-medium"
+              >
+                Name
+              </label>
               <input
                 type="text"
                 name="name"
-                className="border-2 border-gray-300 rounded-md h-10"
+                id="name"
+                aria-label="Your Name"
+                placeholder="Enter your name"
+                className="border border-gray-300 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="email">Email</label>
+              <label
+                htmlFor="email"
+                className="text-gray-700 font-medium"
+              >
+                Email
+              </label>
               <input
-                type="text"
+                type="email"
                 name="email"
-                className="border-2 border-gray-300 rounded-md h-10"
+                id="email"
+                aria-label="Your Email"
+                placeholder="Enter your email"
+                className="border border-gray-300 rounded-md h-12 px-4 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             <div className="flex flex-col gap-2">
-              <label htmlFor="message">Message</label>
+              <label
+                htmlFor="message"
+                className="text-gray-700 font-medium"
+              >
+                Message
+              </label>
               <textarea
                 name="message"
                 id="message"
-                className="border-2 border-gray-300 rounded-md h-20"
+                aria-label="Your Message"
+                placeholder="Type your message here"
+                className="border border-gray-300 rounded-md h-28 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
               ></textarea>
             </div>
-            <button className="border-2 border-gray-400 w-fit self-end px-4 py-1 rounded-lg hover:bg-gray-100">
+            <button
+              type="submit"
+              aria-label="Submit Form"
+              className="bg-blue-500 text-white font-medium px-6 py-2 rounded-lg hover:bg-blue-600 focus:ring-2 focus:ring-blue-500 focus:outline-none self-center md:self-end"
+            >
               Submit
             </button>
           </form>
